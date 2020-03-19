@@ -43,12 +43,16 @@ public class platformer : MonoBehaviour
     }
 
     //Checks if player is falling or dying.
-    void onTriggerEnter2d(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        //If the game object is a falldetector, reset at checkpoint.
-        if (other.tag == "FallDetector")
+        if(other.tag == "FallDetector")
         {
-
+            transform.position = respawnPoint;
+        }   
+        
+        if(other.tag == "checkPoint")
+        {
+            respawnPoint = other.transform.position;
         }
     }
 
