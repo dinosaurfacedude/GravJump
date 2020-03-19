@@ -31,6 +31,10 @@ public class platformer : MonoBehaviour
         {
             rb.gravityScale *= -1;
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit(0);
+        }
     }
 
     //moves left and right.
