@@ -13,6 +13,8 @@ public class platformer : MonoBehaviour
     public LayerMask groundLayer;
     public Vector3 respawnPoint;
     Rigidbody2D rb;
+    public GameObject spawnee;
+    public Transform spawnPos;
 
 
     //makes sure player doesn't fall through blocks
@@ -30,6 +32,7 @@ public class platformer : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             rb.gravityScale *= -1;
+            Instantiate(spawnee, spawnPos.position, spawnPos.rotation);
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
