@@ -32,6 +32,7 @@ public class platformer : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             rb.gravityScale *= -1;
+            //float newSpawnPos = spawnPos.position + spawnee.scale.x + spawnPos.scale.x;
             Instantiate(spawnee, spawnPos.position, spawnPos.rotation);
         }
         if (Input.GetKeyDown(KeyCode.Escape))

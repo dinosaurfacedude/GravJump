@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class bulletBehavior : MonoBehaviour
 {
-   // public GameObject spawnee;
-   // public Transform spawnPos;
+
     public GameObject enemy;
     public float lifeTime = 10f;
     public Camera mainCamera;
@@ -16,17 +15,13 @@ public class bulletBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mainCamera = GameObject.Find("mainCamera").GetComponent<Camera>();
+        //mainCamera = GameObject.Find("mainCamera").GetComponent<Camera>();
     }
 
     // Update is called once per frame
     void Update()
     {
-       /* if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Instantiate(spawnee, spawnPos.position, spawnPos.rotation);
-            
-        }*/
+        //time out for the bullet
         if (lifeTime > 0)
         {
             lifeTime -= Time.deltaTime;
@@ -44,16 +39,25 @@ public class bulletBehavior : MonoBehaviour
         }*/
         Move();
     }
-
+    //Despawns the bullet instance
     void DestroyBullet()
     {
         Destroy(this.gameObject);
     }
 
-    void OnCollisionEnter(Collision coll)
+    private void OnTriggerStay2D(Collider2D other)
     {
-        DestroyBullet();
+        print("Trigger with: " + other.tag) ;
+        if (other.tag == "Enemy") 
+        {
+            print("bulletCollison");
+            DestroyBullet();
+            //print("hit");
+            Destroy(other.gameObject);
+        }
     }
+    //Moves the Bullet
+    //TODO: Direction of player
     void Move()
     {
         transform.Translate(Time.deltaTime*bulletSpeed, 0, 0);
