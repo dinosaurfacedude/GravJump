@@ -16,7 +16,6 @@ public class Enemy1Behavior : MonoBehaviour
     void Update()
     {
         move();
-        checkForBullet();
        
     }
 
@@ -35,10 +34,6 @@ public class Enemy1Behavior : MonoBehaviour
         }
     }
 
-    void checkForBullet()
-    {
-
-    }
     void destroyEnemy()
     {
         Destroy(this.gameObject);
@@ -46,10 +41,11 @@ public class Enemy1Behavior : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Bullet") 
+        if (other.tag == "Bullet")
         {
-            print("Bullet Hit");
+
             destroyEnemy();
+            Destroy(other);
         }
 
         if(other.tag == "FallDetector")

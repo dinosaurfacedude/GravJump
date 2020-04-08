@@ -15,12 +15,13 @@ public class platformer : MonoBehaviour
     Rigidbody2D rb;
     public GameObject spawnee;
     public Transform spawnPos;
-
-
+    private bool lastWentRight = true;
+    public static platformer Instance;
     //makes sure player doesn't fall through blocks
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        Instance = this;
     }
 
     // Update is called once per frame
@@ -44,16 +45,25 @@ public class platformer : MonoBehaviour
     //moves left and right.
     void Move()
     {
+
         float x = Input.GetAxisRaw("Horizontal");
         float moveBy = x * speed;
         rb.velocity = new Vector2(moveBy, rb.velocity.y);
+        if (lastWentRight && (x<0))
+        {
+            lastWentRight = false;
+        }else if(!lastWentRight && (x > 0))
+        {
+            lastWentRight = true;
+        }
+
 
     }
 
     //Checks if player is falling or dying.
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "FallDetector")
+        if(other.tag == "FallDetector" || other.tag == "Enemy")
         {
             transform.position = respawnPoint;
         }   
@@ -64,7 +74,10 @@ public class platformer : MonoBehaviour
         }
     }
 
-
+    public bool isLastWentRight()
+    {
+        return lastWentRight;
+    }
 }
 
 

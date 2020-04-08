@@ -11,11 +11,12 @@ public class bulletBehavior : MonoBehaviour
     public Vector2 widthThresold;
     public Vector2 heightThresold;
     public float bulletSpeed;
-
+    int direction;
     // Start is called before the first frame update
     void Start()
     {
         //mainCamera = GameObject.Find("mainCamera").GetComponent<Camera>();
+         direction = checkPlatformerDirection();
     }
 
     // Update is called once per frame
@@ -45,14 +46,22 @@ public class bulletBehavior : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    private void OnTriggerStay2D(Collider2D other)
+    private int checkPlatformerDirection()
     {
-        print("Trigger with: " + other.tag) ;
+        if (platformer.Instance.isLastWentRight())
+        {
+            return 1;
+        }
+        else
+        {
+            return -1;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
         if (other.tag == "Enemy") 
         {
-            print("bulletCollison");
             DestroyBullet();
-            //print("hit");
             Destroy(other.gameObject);
         }
     }
@@ -60,7 +69,7 @@ public class bulletBehavior : MonoBehaviour
     //TODO: Direction of player
     void Move()
     {
-        transform.Translate(Time.deltaTime*bulletSpeed, 0, 0);
+        transform.Translate(direction*Time.deltaTime*bulletSpeed, 0, 0);
     }
 
 }
