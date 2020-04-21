@@ -15,25 +15,19 @@ public class goodGuyBehavior : MonoBehaviour
     {
         
     }
-    void destroyGoodGuy()
-    {
-        Destroy(this.gameObject);
-    }
+ 
 
     private void OnTriggerEnter2D(Collider2D other)
     {
   
         if (other.tag == "Bullet")
         {
-            destroyGoodGuy();
+            
             platformer.Instance.transform.position = platformer.Instance.respawnPoint;
 
         }
 
-        if (other.tag == "FallDetector")
-        {
-            destroyGoodGuy();
-        }
+
     }
 
 

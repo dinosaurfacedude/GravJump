@@ -6,7 +6,7 @@ public class bulletBehavior : MonoBehaviour
 {
 
     public GameObject enemy;
-    public float lifeTime = 10f;
+    public float lifeTime = 1f;
     public Camera mainCamera;
     public Vector2 widthThresold;
     public Vector2 heightThresold;

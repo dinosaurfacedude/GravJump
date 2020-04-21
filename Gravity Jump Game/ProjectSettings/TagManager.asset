@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - goodGuy
   - Bullet
+  - levelEnd
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - background
   - Ground
   - player
-  - 
+  - instructions layer
   - 
   - 
   - 
