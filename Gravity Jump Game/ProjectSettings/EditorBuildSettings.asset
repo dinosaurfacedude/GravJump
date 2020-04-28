@@ -17,4 +17,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/worldThree.unity
     guid: e80fac18636c92943ad57cb8951d39ef
+  - enabled: 1
+    path: Assets/Scenes/worldFour.unity
+    guid: c46a284f7ddcd42448edbae2b3a9f2c5
+  - enabled: 1
+    path: Assets/Scenes/worldFive.unity
+    guid: 2b6827662139d904a86f13466bcb0169
+  - enabled: 1
+    path: Assets/Scenes/worldSix.unity
+    guid: 28db5471e9df5d74cad47ac264b26406
+  - enabled: 1
+    path: Assets/Scenes/worldSeven.unity
+    guid: a36fbed7642275d48ba7938c58ff1c48
   m_configObjects: {}
