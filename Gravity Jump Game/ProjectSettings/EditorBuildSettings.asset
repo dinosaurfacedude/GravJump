@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/worldSeven.unity
     guid: a36fbed7642275d48ba7938c58ff1c48
+  - enabled: 1
+    path: Assets/Scenes/RSWorld2.unity
+    guid: 31161319f08c49443b8bfd7c4dcaaa1d
+  - enabled: 1
+    path: Assets/Scenes/RSWorld1.unity
+    guid: a38687e1c1286a74cbb6d7c08854e65c
   m_configObjects: {}

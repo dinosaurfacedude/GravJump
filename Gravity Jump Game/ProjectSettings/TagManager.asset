@@ -10,6 +10,7 @@ TagManager:
   - goodGuy
   - Bullet
   - levelEnd
+  - Obstruction
   layers:
   - Default
   - TransparentFX

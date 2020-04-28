@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class bulletBehavior : MonoBehaviour
@@ -59,11 +60,20 @@ public class bulletBehavior : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
+        print(other.tag);
         if (other.tag == "Enemy") 
         {
             DestroyBullet();
             Destroy(other.gameObject);
+        }else if(other.tag == "Obstruction" || other.tag == "FallDetector")
+        {
+            print("OBS or FD");
+            DestroyBullet();
         }
+    }
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        Debug.Log("OnCollisionEnter2D");
     }
     //Moves the Bullet
     //TODO: Direction of player
