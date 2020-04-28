@@ -1206,6 +1206,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2139,6 +2140,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2476,33 +2478,6 @@ MonoBehaviour:
   respawnPoint: {x: 0, y: 0, z: 0}
   spawnee: {fileID: 1639685003932640555, guid: 9d8c7368a03577441b13fedb127e4bd5, type: 3}
   spawnPos: {fileID: 1685673802}
---- !u!1 &1776361184 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 227632975427243004, guid: 8dd4b446fcc96cd45bb412255e018e91,
-    type: 3}
-  m_PrefabInstance: {fileID: 1991416196}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &1776361189
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1776361184}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1001 &1786531372
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2859,11 +2834,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GoodGuy
-      objectReference: {fileID: 0}
-    - target: {fileID: 227632975427243004, guid: 8dd4b446fcc96cd45bb412255e018e91,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3010361143287592168, guid: 8dd4b446fcc96cd45bb412255e018e91,
         type: 3}

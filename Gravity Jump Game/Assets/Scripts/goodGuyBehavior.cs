@@ -19,7 +19,7 @@ public class goodGuyBehavior : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-  
+        //print("Good Guy hit: " + other.tag);
         if (other.tag == "Bullet")
         {
             

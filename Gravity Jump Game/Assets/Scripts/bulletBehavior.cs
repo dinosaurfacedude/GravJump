@@ -60,21 +60,21 @@ public class bulletBehavior : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        print(other.tag);
-        if (other.tag == "Enemy") 
+        //print("Bullet hit: " + other.tag);
+        if (other.tag == "Enemy" || other.tag=="goodGuy") 
         {
             DestroyBullet();
             Destroy(other.gameObject);
-        }else if(other.tag == "Obstruction" || other.tag == "FallDetector")
+        }else if(other.tag != "Player")
         {
-            print("OBS or FD");
+            //print("OBS or FD");
             DestroyBullet();
         }
     }
-    void OnCollisionEnter2D(Collision2D col)
-    {
-        Debug.Log("OnCollisionEnter2D");
-    }
+   //// void OnCollisionEnter2D(Collision2D col)
+    //{
+       // Debug.Log("Bullet Collision with: " + col.gameObject.tag);
+    //}
     //Moves the Bullet
     //TODO: Direction of player
     void Move()

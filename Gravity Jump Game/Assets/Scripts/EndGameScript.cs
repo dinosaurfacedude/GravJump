@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class ObstructionScript : MonoBehaviour
+using UnityEngine.SceneManagement;
+public class EndGameScript : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -15,19 +15,11 @@ public class ObstructionScript : MonoBehaviour
     {
         
     }
-
-    void OnCollisionEnter2D(Collision2D col)
-    {
-        Debug.Log("OnCollisionEnter2D");
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
-        print(other.tag);
+        if (other.tag == "Player")
+        {
+            SceneManager.LoadScene(0); //Go to Main Menu
+        }
     }
-
-
-
-
-
-    }
+}
