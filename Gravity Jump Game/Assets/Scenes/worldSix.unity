@@ -409,12 +409,12 @@ PrefabInstance:
     - target: {fileID: 2990428259563571457, guid: c2e88789b491e0548842771ad1e0d656,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.1073046
+      value: -3.07
       objectReference: {fileID: 0}
     - target: {fileID: 2990428259563571457, guid: c2e88789b491e0548842771ad1e0d656,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.435028
+      value: 12.76
       objectReference: {fileID: 0}
     - target: {fileID: 2990428259563571457, guid: c2e88789b491e0548842771ad1e0d656,
         type: 3}
@@ -668,12 +668,12 @@ PrefabInstance:
     - target: {fileID: 2990428259563571457, guid: c2e88789b491e0548842771ad1e0d656,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.91666365
+      value: -0.94
       objectReference: {fileID: 0}
     - target: {fileID: 2990428259563571457, guid: c2e88789b491e0548842771ad1e0d656,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.3752613
+      value: -3.04
       objectReference: {fileID: 0}
     - target: {fileID: 2990428259563571457, guid: c2e88789b491e0548842771ad1e0d656,
         type: 3}
@@ -979,12 +979,12 @@ PrefabInstance:
     - target: {fileID: 2990428259563571457, guid: c2e88789b491e0548842771ad1e0d656,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.0707893
+      value: 6.11
       objectReference: {fileID: 0}
     - target: {fileID: 2990428259563571457, guid: c2e88789b491e0548842771ad1e0d656,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.405422
+      value: 12.69
       objectReference: {fileID: 0}
     - target: {fileID: 2990428259563571457, guid: c2e88789b491e0548842771ad1e0d656,
         type: 3}
@@ -1179,6 +1179,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1190,7 +1191,7 @@ MonoBehaviour:
     (HINT:) you might press the
 
     spacebar
-    more thwan once per fall'
+    more than once per fall'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -1259,7 +1260,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 159.42078, w: 0}
   m_textInfo:
     textComponent: {fileID: 764894281}
-    characterCount: 93
+    characterCount: 92
     spriteCount: 0
     spaceCount: 17
     wordCount: 17
@@ -2563,12 +2564,12 @@ PrefabInstance:
     - target: {fileID: 2990428259563571457, guid: c2e88789b491e0548842771ad1e0d656,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.6361358
+      value: 2.65
       objectReference: {fileID: 0}
     - target: {fileID: 2990428259563571457, guid: c2e88789b491e0548842771ad1e0d656,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.9738493
+      value: 5.19
       objectReference: {fileID: 0}
     - target: {fileID: 2990428259563571457, guid: c2e88789b491e0548842771ad1e0d656,
         type: 3}
